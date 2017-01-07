@@ -7,10 +7,10 @@ RUN apt-get update &&  \
     apt-get install -y git wget curl && \
         apt-get clean
 
-RUN curl -sL https://deb.nodesource.com/setup | bash -
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 
 RUN apt-get update &&  \
-    apt-get install -y nodejs nodejs-legacy build-essential && \
+    apt-get install -y nodejs build-essential && \
     ln -s /usr/bin/nodejs /usr/local/bin/node && \ 
     apt-get clean
 
